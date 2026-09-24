@@ -30,11 +30,12 @@ h1, h2 { font-size: clamp(3.4rem, 7.4vw, 8.2rem); letter-spacing: -.075em; line-
 .button-dark:hover { background: var(--cobalt); }
 .text-link { border-bottom: 1px solid currentColor; font-size: .76rem; font-weight: 700; padding-bottom: 5px; text-transform: uppercase; }
 .hero-art { background: var(--cobalt); min-height: 480px; overflow: hidden; position: relative; }
+.portrait { height: 100%; inset: 0; object-fit: cover; object-position: center top; position: absolute; width: 100%; }
+.hero-art::after { background: linear-gradient(180deg, transparent 58%, rgba(23, 33, 31, .7)); content: ""; inset: 0; position: absolute; }
 .hero-art::before { background: var(--orange); border-radius: 50%; content: ""; height: 58%; left: 22%; position: absolute; top: 21%; width: 58%; }
 .orbit { border: 1px solid rgba(255,255,255,.72); border-radius: 50%; height: 118%; left: -9%; position: absolute; top: -10%; transform: rotate(-28deg); width: 118%; }
 .orbit-two { height: 75%; left: 12%; top: 13%; transform: rotate(50deg); width: 75%; }
-.art-label { bottom: 26px; color: var(--white); font: 500 .75rem "DM Mono", monospace; left: 28px; line-height: 1.2; position: absolute; }
-.art-number { color: var(--white); font: 500 4rem "DM Mono", monospace; opacity: .95; position: absolute; right: 24px; top: 19px; }
+.art-label { bottom: 26px; color: var(--white); font: 500 .75rem "DM Mono", monospace; left: 28px; line-height: 1.2; position: absolute; z-index: 1; }.art-number { color: var(--white); font: 500 4rem "DM Mono", monospace; opacity: .95; position: absolute; right: 24px; top: 19px; z-index: 1; }
 .ticker { align-items: center; background: var(--lime); display: flex; gap: 28px; justify-content: space-around; overflow: hidden; padding: 19px 5vw; white-space: nowrap; }
 .ticker div { font: 500 .67rem "DM Mono", monospace; }
 .ticker span { font-size: 1.2rem; }
